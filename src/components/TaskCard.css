@@ -1,0 +1,54 @@
+.task_card {
+    width: 100%;
+    min-height: 100px;
+    background-color: #000;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    color: red; /* Text color remains red */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+.task_text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.task_card_bottom_line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task_delete {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.task_delete:hover {
+    transform: scale(1.1);
+    
+}
+
+.delete_icon {
+    width: 20px;
+    opacity: 50%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    filter: invert(36%) sepia(85%) saturate(6461%) hue-rotate(346deg) brightness(100%) contrast(103%);
+}
+
+.task_delete:hover .delete_icon {
+    opacity: 80%;
+    filter: invert(36%) sepia(85%) saturate(6461%) hue-rotate(346deg) brightness(100%) contrast(103%);
+}

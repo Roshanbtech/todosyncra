@@ -1,0 +1,74 @@
+/* Tag component neon effect */
+.tag {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  position: relative; /* Added for positioning of tag-name */
+}
+
+/* Neon colors for each tag button */
+.tag:nth-child(1) {
+  background-color:  #E44D26; /* Neon pink */
+  color: #fff;
+}
+
+.tag:nth-child(2) {
+  background-color: #3498db; /* Neon green */
+  color: #fff;
+}
+
+.tag:nth-child(3) {
+  background-color: rgb(240,219,79); /* Neon yellow */
+  color: rgb(50,51,48);
+}
+
+.tag:nth-child(4) {
+  background-color: #000; /* Neon cyan */
+  color: #61dbfb;
+}
+
+.tag:nth-child(5) {
+  background-color: #303030;
+  color: #3c873a;
+}
+
+.tag:nth-child(6) {
+  background-color: #E8E7D5; /* Neon pink */
+  color: #4DB33D;
+}
+.icon-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag-name {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  padding: 4px 8px;
+  background: #333;
+  color: red;
+  border-radius: 4px;
+  white-space: nowrap;
+  visibility: hidden; /* Hide the tag name by default */
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+button:hover {
+  transform:  scale(1.1);
+  /* transform: scale(1.1); */
+  filter: drop-shadow( 0  0 8px red);
+  /* box-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red; */
+}
+
+.icon-container:hover .tag-name {
+  visibility: visible; /* Show the tag name on hover */
+  opacity: 1;
+}
