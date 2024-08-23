@@ -93,7 +93,6 @@
   padding: 3px 13px;
   border: none;
   cursor: pointer;
-  margin-left : 5px;
   transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
