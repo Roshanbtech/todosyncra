@@ -1,0 +1,65 @@
+/* App Container */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.task_input {
+    font-family: 'Poppins', sans-serif;
+}
+
+.task_column_heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.task_text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+h2.task_column_heading {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.task_input {
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.task_card .task_text {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: 150px auto;
+  min-height: 100vh;
+}
+
+/* Main Content Area */
+.app_main {
+  display: flex;
+  flex-direction: column; /* Stacks columns vertically on small screens */
+  align-items: center;
+  padding: 20px 5%;
+}
+
+/* Task Column Styling */
+.task_column {
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media(min-width: 768px) {
+  /* Adjust layout for larger screens */
+  .app_main {
+    flex-direction: row; /* Aligns columns side by side on medium to large screens */
+    justify-content: space-evenly;
+  }
+
+  .task_column {
+    width: 30%;
+    margin: 20px;
+  }
+}

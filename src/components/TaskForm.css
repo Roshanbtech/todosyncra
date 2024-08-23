@@ -1,0 +1,104 @@
+/* Container for the form */
+.app_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #dcdcdc;
+  background-color: #000;
+  padding: 20px;
+}
+
+/* Form styling */
+.app_header > form {
+  width: 90%;
+  max-width: 600px; /* Limit form width on large screens */
+}
+
+/* Neon input field */
+.task_input {
+  font-size: 20px;
+  font-weight: 500;
+  background: #000;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  width: 100%;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.task_input::placeholder {
+  color: red;
+}
+
+/* Focused input field with glowing neon */
+.task_input:focus {
+  box-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red;
+  transform: scale(1.05);
+}
+
+/* Container for the bottom line elements */
+.task_form_bottom_line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.task_status,
+.task_submit {
+  width: 100%; /* Full width on small screens */
+}
+
+@media(min-width: 768px) {
+  /* Adjust layout for larger screens */
+  .task_form_bottom_line {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .task_status,
+  .task_submit {
+    width: auto;
+    max-width: 120px;
+  }
+}
+
+/* Neon dropdown styling */
+.task_status {
+  font-size: 16px;
+  font-weight: 500;
+  background: #000;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 0 5px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Focused dropdown with glowing neon */
+.task_status:focus {
+  box-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red;
+  transform: scale(1.05);
+}
+
+/* Neon submit button */
+.task_submit {
+  font-size: 16px;
+  font-weight: 500;
+  background-color: red;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 13px;
+  border: none;
+  cursor: pointer;
+  margin-left : 5px;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for the submit button */
+.task_submit:hover {
+  box-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red;
+  transform: scale(0.75);
+}
